@@ -97,25 +97,16 @@ switch (type) {
 
 console.log(getPetExerciseInfo("perro", 8))
 
-/* _____________________________DAY-04________________________________ 
+/* _____________________________DAY-03-EX3________________________________ IMMPRIMIR UN TRIANGULO
 
 */
-const user = {
-	name: "Pepito",
-  age: 20,
-  role: "JavaScript developer"
-}
-
-for (const prop in user) {
-	console.log(user[prop])
-}
 const array = [1, 2, 3, 4, 5];
 for (let l = 0; l < array.length; l++) {
   console.log(array[l]);
   console.log(array.length);
 }
 
-export function printTriangle(size, character) {
+function printTriangle(size, character) {
   // Tu código aquí 👈
   let tri = '';
   for (let i = 1; i <= size; i++) {
@@ -130,5 +121,6 @@ export function printTriangle(size, character) {
       tri = tri + '\n'
     }
   }
+  return tri
 }
-
+console.log(printTriangle(10, '#'))
