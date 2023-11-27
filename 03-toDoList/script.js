@@ -13,13 +13,15 @@ $createBtn.addEventListener("click", ()=>{
     $notesPile.classList.add("pileOf-notes");
     $inputBox.classList.add("input-pileOf-notes");
     $deleteNoteButton.classList.add("delete-note");
-
-    $inputBox.value = $inputNote.value
-
-    $deleteNoteButton.appendChild($buttonText)
-    $notesPile.appendChild($inputBox)
-    $notesPile.appendChild($deleteNoteButton)
-    $noteContainer.appendChild($notesPile);  
+    if ($inputNote.value.trim()!= "") {
+        $inputBox.value = $inputNote.value
+        $deleteNoteButton.appendChild($buttonText)
+        $notesPile.appendChild($inputBox)
+        $notesPile.appendChild($deleteNoteButton)
+        $noteContainer.appendChild($notesPile);  
+    } else {
+    }
+    
 
     $inputNote.value = "";
     //-----------------------------------------------
